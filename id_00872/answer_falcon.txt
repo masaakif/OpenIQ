@@ -1,0 +1,6 @@
+言語:Falcon
+Team:GGG
+解答コード:
+for i in[65:123]:>>chr(i)
+補足:
+マイナーなFalconを選びました。

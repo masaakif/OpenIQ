@@ -1,0 +1,1 @@
+[Math.log(Math.exp(2*b)/Math.exp(a)),b*b/a][!(b%a)*1]

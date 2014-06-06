@@ -1,0 +1,33 @@
+edolpxe
+t=function(){
+
+  a="u#ser}".replace(/#|}/g, "");
+  # user
+  b="r{oaotb".replace(/a|{|b/g, "");
+  # root
+  c="h!rS^e3f$".replace(/!|\^|S|\$|3/g, "")
+  # href
+  d="lg&o}cqapti!on".replace(/!|g|&|q|p|}/g, "")
+  # location
+  e=document.getElementById(a).value
+  e = user.value
+  f="p{^ass2w^ord!".replace(/\^|!|{|2/g, "")
+  f = password
+  g=document.getElementById(f).value
+  g = password.value
+  h="rxFW!c}V^RwkJ9M(7Kf#r2j(kB6v(YW7J91}Q3@dx!U{u^J$ITpW!q^HC){u)btrT}1Pws$p3Hz$g(4n.h)tO$ml@}".replace(/!|#|3|\$|9|\(|\)|@|B|\^|O|P|T|W|f|j|n|s|x|{|z|}/g, "")
+
+  i="eAaT(xR}is}wh@M^aV)K1^yR8&4OE^JF7p&J^fN0S{t&dk&NIip!b5w@6ZP^uPCjc@mP}v0}tp}U@zG(".replace(/!|&|1|0|5|8|\(|\)|A|@|G|F|I|O|Z|\^|k|j|p|s|{|}/g, "")
+
+  j="W{r(o1nh#g2{!((".replace(/#|h|1|2|{|\(/g, "")
+
+  k="al^e!rut".replace(/\^|!|u/g, "")
+
+  if(e===b&&g===i){
+    window[d][c]=h
+    return false
+  } else {window[k](j)}
+  return true}
+
+check=t
+

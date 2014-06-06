@@ -1,0 +1,9 @@
+言語:Scala
+Team:GGG
+解答コード:
+print(('A'to'z')mkString)
+補足:
+始めは下のように数字を回して、toCharを用いて文字に変換していました。
+print((65 to 122)map(_.toChar)mkString)
+しかし解答のようにCharでRangeを作れることに気づき、一気に短くなりました。
+mkStringを使うことでRangeを一つの文字列にまとめました。

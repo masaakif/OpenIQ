@@ -1,0 +1,36 @@
+Assembler (nasm-2.10.01)	1	0 point	600	600
+AWK (gawk)	1	0 point	962	962
+AWK (mawk)	1	0 point	1395	1395
+Bash	3	-20 point	858	1074
+Brainf**k	4	-30 point	280	306
+C#	1	0 point	1300	1300
+C++ 4.3.2	1	0 point	612	612
+C++ 4.8.1	2	-10 point	576	628
+C++11	3	-20 point	544	1011
+C99 strict	2	-10 point	595	630
+Common Lisp (clisp)	1	0 point	1000	1000
+C	8	-70 point	819	2124
+F#	1	0 point	4080	4080
+Forth	2	-10 point	364	378
+Fortran	1	0 point	578	578
+Groovy	1	0 point	375	375
+Haskell	4	-30 point	176	1373
+Intercal	1	0 point	11620	11620
+Java7	1	0 point	1953	1953
+JavaScript (rhino)	1	0 point	1800	1800
+JavaScript (spidermonkey)	1	0 point	4216	4216
+Java	2	-10 point	1334	1462
+Nemerle	1	0 point	828	828
+Objective-C	1	0 point	912	912
+Octave	12	-110 point	130	141
+Pascal (fpc)	1	0 point	2088	2088
+Perl 6	2	-10 point	266	266
+Perl	4	-30 point	520	804
+PHP	5	-40 point	648	1349
+Python 3	1	0 point	1408	1408
+Python	4	-30 point	759	963
+Ruby	12	-110 point	143	397
+R	3	-20 point	540	1720
+Scala	3	-20 point	204	2909
+Tcl	1	0 point	1820	1820
+Whitespace	7	-60 point	159	529

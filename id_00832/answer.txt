@@ -1,0 +1,75 @@
+※これは解答用テキストファイルです。
+
+■解答を記入してください。
+S(131): 42.28cm
+M(200): 61.55cm
+L(171): 87.03cm
+
+
+■使用言語・動作環境について
+(1)言語の種類を記入してください。未記入の場合、減点となります。
+Scala
+
+
+(2)コンパイラ／インタプリタの名称・バージョン情報を記入してください。未記入の場合、減点となります。
+2.10.3
+
+
+■プログラムの特長・工夫した点等、アピールポイントについて。
+あなたが書いたコードの内容や工夫した点をわかりやすく説明してください。未記入の場合、減点となります。
+
+Scalaは勉強中ですが、自分なりに出来るだけScalaらしく、かつ技巧的にならず、わかりやすくなるように心がけました。
+Scalaでは一行がずらずらと長くなりやすいので、短めに抑えるように気を配りました。
+暗黙的型変換は使わないようにしました。
+結果集計（makeupおよびret_result_avg）はHashMapを使えばもっと綺麗に書けるような気がしましたが思いつかず諦めました。
+
+
+■もし企業からのスカウトメールがきたらどのくらい積極的にアクションすると思いますか？任意でお答えください。
+「積極的に会ってみたいと思う」「社名や条件次第では会ってみたいと思う」「よほどのことがない限り返信しない」、他ありましたら記入してください。
+
+現状の会社には概ね満足しているため、かなり条件が良くない限りは検討しないつもりです。
+
+
+■あなたが書いたコードを貼り付けてください。未記入の場合、減点となります。
+
+object Classifier {
+  case class Fish(name: String, size: Int) {
+    def this(s: String) = this(s.split(',')(0), Integer.parseInt(s.stripLineEnd.split(',')(1)))
+  }
+
+  def classify(f: Fish): String = {
+    f match {
+      case Fish("カツオ", sz) if sz < 50 => "S"
+      case Fish("カツオ", sz) if sz < 75 => "M"
+      case Fish("カツオ", _) => "L"
+      case _ => "x"
+    }
+  }
+
+  def classify(s: String): String = classify(new Fish(s))
+
+  def makeup(ia: Array[String]): Array[String] = {
+    val ret_result_avg = (sz: String) => {
+      val sa = ia.filter(x => classify(x) == sz).map(x => new Fish(x)).map(_.size)
+      if (sa.size > 0)
+        Some(f"${sz}(${sa.size}): ${sa.sum.toDouble / sa.size}%.2fcm")
+      else
+        None
+    }
+
+    val ss = ret_result_avg("S")
+    val ms = ret_result_avg("M")
+    val ls = ret_result_avg("L")
+
+    Array(ss, ms, ls).filter(_.isDefined).map(_.get)
+  }
+}
+
+object Main {
+  def main(args: Array[String]) {
+    import scala.io.Source
+    val src = Source.fromFile("C:/OpenIQ/id_00832/katsuo1000.csv")
+    val results = Classifier.makeup(src.getLines.toArray)
+    results.foreach(println(_))
+  }
+}

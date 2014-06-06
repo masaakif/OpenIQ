@@ -1,0 +1,7 @@
+言語:Nimrod
+Team:GGG
+解答コード:
+for z in'A'..'z':stdout.write z
+補足:
+Scalaではかなわないと思い、マイナーなNimrodにしました。
+これが最短とは思えませんが。

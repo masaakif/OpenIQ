@@ -1,0 +1,7 @@
+言語:Haskell
+Team:GGG
+解答コード:
+putStr['A'..'z']
+補足:
+Nimrodでは長すぎると思い、Haskellで試してみました。もとからある「main = 」は
+省略してあります。これが最短と思います。
